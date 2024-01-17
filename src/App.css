@@ -53,7 +53,7 @@ h1 {
 }
 
 .countdown-item {
-  @apply text-8xl  text-white px-2 py-1 rounded; /* Larger font size for the countdown items */
+  @apply text-4xl md:text-8xl text-white px-2 py-1 rounded; /* Larger font size for the countdown items */
 }
 
 .spotify-embed {
