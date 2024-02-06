@@ -61,6 +61,15 @@ h1 {
   text-align: center;
 }
 
+:root {
+  --tw-gradient-stops-pastel1: #aed9e0;
+  --tw-gradient-stops-pastel2: #f8bac9;
+  --tw-gradient-stops-pastel3: #b6f8c4;
+  --tw-gradient-stops-pastel4: #ffe699;
+  --tw-gradient-stops-pastel5: #ffc3a0;
+  --tw-gradient-stops-pastel6: #f6d6d6;
+  --tw-gradient-stops-pastel7: #d9d9f3;
+}
 
 /* src/App.css or your component's stylesheet */
 .gradient-bg-pastel {
@@ -73,4 +82,26 @@ h1 {
     var(--tw-gradient-stops-pastel6),
     var(--tw-gradient-stops-pastel7)
   );
+}
+
+/* src/components/Invite.css */
+.invite-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+h1 {
+  color: #3498db;
+}
+
+.card {
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 20px;
+  max-width: 400px;
+  text-align: center;
 }

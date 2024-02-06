@@ -16,7 +16,7 @@ const CountdownComponent = () => {
                 <span className="countdown-item bg-pastel3">{String(days).padStart(2, '0')}d</span>
                 <span className="countdown-item bg-pastel4">{String(hours).padStart(2, '0')}:</span>
                 <span className="countdown-item bg-pastel5">{String(minutes).padStart(2, '0')}:</span>
-                <span className="countdown-item bg-pastel7">{String(seconds).padStart(2, '0')}s</span>
+                <span className="countdown-item bg-pastel6">{String(seconds).padStart(2, '0')}s</span>
             </div>
            
           <div className="spotify-embed">
@@ -40,7 +40,7 @@ const CountdownComponent = () => {
   };
 
   return (
-    <div className="h-screen  gradient-bg-pastel">
+    <div className="App-header h-screen gradient-bg-pastel">
       <Countdown date={targetDate} renderer={renderer} />
     </div>
   );
