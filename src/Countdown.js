@@ -11,7 +11,7 @@ const CountdownComponent = () => {
     } else {
       return (
         <div className="flex flex-col items-center justify-center h-screen">
-               <h1 className="text-4xl font-bold ">Comming Soon</h1>
+               <h1 className="text-4xl font-bold ">Coming Soon</h1>
             <div className="countdown-container  p-8 rounded-lg shadow-md">
                 <span className="countdown-item bg-pastel3">{String(days).padStart(2, '0')}d</span>
                 <span className="countdown-item bg-pastel4">{String(hours).padStart(2, '0')}:</span>
