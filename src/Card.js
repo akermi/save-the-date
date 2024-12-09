@@ -1,11 +1,17 @@
-// src/components/Card.js
 import React from 'react';
+import './Card.css'; // เพิ่มไฟล์ CSS
 
-const Card = ({ title, content }) => {
+const Card = () => {
   return (
-    <div className="card">
-      <h2>{title}</h2>
-      <p>{content}</p>
+    <div className="card-container">
+      <div className="card">
+        <div className="card-face card-front">
+          <img src="img/1.png" alt="Front" />
+        </div>
+        <div className="card-face card-back">
+          <img src="img/2.png" alt="Back" />
+        </div>
+      </div>
     </div>
   );
 };

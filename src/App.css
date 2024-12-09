@@ -48,9 +48,9 @@ h1 {
   @apply text-pink-500; /* Pink color for wedding theme */
 }
 
-.countdown-container {
+/* .countdown-container {
   @apply mt-8 space-x-2;
-}
+} */
 
 .countdown-item {
   @apply text-4xl md:text-8xl text-white px-2 py-1 rounded; /* Larger font size for the countdown items */
@@ -62,25 +62,25 @@ h1 {
 }
 
 :root {
-  --tw-gradient-stops-pastel1: #aed9e0;
-  --tw-gradient-stops-pastel2: #f8bac9;
-  --tw-gradient-stops-pastel3: #b6f8c4;
-  --tw-gradient-stops-pastel4: #ffe699;
+  --tw-gradient-stops-pastel1:#f5e58d;/* #aed9e0;*/
+  --tw-gradient-stops-pastel2:#f3c19e;/* #f8bac9;*/
+  --tw-gradient-stops-pastel3: #f09658;/*#b6f8c4;*/
+  --tw-gradient-stops-pastel4: #f8cccb;/*#ffe699;
   --tw-gradient-stops-pastel5: #ffc3a0;
   --tw-gradient-stops-pastel6: #f6d6d6;
-  --tw-gradient-stops-pastel7: #d9d9f3;
+  --tw-gradient-stops-pastel7: #d9d9f3;*/
 }
 
 /* src/App.css or your component's stylesheet */
 .gradient-bg-pastel {
-  background: linear-gradient(to bottom right, 
-    var(--tw-gradient-stops-pastel1),
-    var(--tw-gradient-stops-pastel2),
+  background: var(--tw-gradient-stops-pastel4/*linear-gradient(135deg, 
+    var(--tw-gradient-stops-pastel4),
+    var(--tw-gradient-stops-pastel2)/*,
     var(--tw-gradient-stops-pastel3),
     var(--tw-gradient-stops-pastel4),
     var(--tw-gradient-stops-pastel5),
     var(--tw-gradient-stops-pastel6),
-    var(--tw-gradient-stops-pastel7)
+    var(--tw-gradient-stops-pastel7)*/
   );
 }
 
@@ -96,7 +96,7 @@ h1 {
   color: #3498db;
 }
 
-.card {
+/* .card {
   background-color: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
@@ -104,4 +104,77 @@ h1 {
   margin-top: 20px;
   max-width: 400px;
   text-align: center;
+} */
+
+.wedding-page {
+  font-family: 'Lora', serif;
+  color: #555;
+  text-align: center;
+  padding: 20px;
+  background-color: #fefefe;
+}
+
+.header {
+  background: #ffecd1;
+}
+
+.couple-name {
+  font-size: 3rem;
+  color: #333;
+}
+
+.wedding-date {
+  font-size: 1.5rem;
+  color: #888;
+}
+
+.about-us, .rsvp, .wedding-details, .registry {
+  margin: 40px 0;
+}
+
+.story-image {
+  width: 100%;
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+.rsvp-button, .registry-button {
+  padding: 10px 20px;
+  background-color: #ff7f50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.rsvp-button:hover, .registry-button:hover {
+  background-color: #e76e3a;
+}
+
+.footer {
+  padding: 20px;
+  background-color: #ffecd1;
+  color: #333;
+}
+
+.countdown-container {
+  display: flex;
+  flex-wrap: wrap; /* Wrap content for smaller screens */
+  align-items: center;
+  justify-content: center;
+}
+
+.countdown,
+.image-container {
+  flex: 1 1 50%;
+  min-width: 300px;
+  display: flex;        /* Use flexbox */
+  justify-content: center; /* Centers horizontally */
+  align-items: center;     /* Centers vertically (optional) */
+}
+
+.responsive-image {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
 }

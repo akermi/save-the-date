@@ -1,13 +1,16 @@
 // src/Countdown.js
 import React from 'react';
 import Countdown from 'react-countdown';
+import { useNavigate } from 'react-router-dom';
 
-const targetDate = new Date('March 9, 2025 00:00:00 GMT+0000').getTime();
+const targetDate = new Date('March 9, 2025 07:00:00 GMT+0000').getTime();
 
 const CountdownComponent = () => {
+  const navigate = useNavigate();
   const renderer = ({ days, hours, minutes, seconds, completed }) => {
     if (completed) {
-      return <span className="text-3xl font-semibold text-pink-500">eiei</span>;
+      navigate('/story');
+      return null; // 
     } else {
       return (
         <div className="flex flex-col items-center justify-center h-screen">
