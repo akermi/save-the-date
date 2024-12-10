@@ -17,7 +17,6 @@
     "react-router-dom": "^6.21.3",
     "react-scripts": "5.0.1",
     "react-scroll-motion": "^0.3.3",
-    "tailwindcss": "^3.4.1",
     "web-vitals": "^2.1.4"
   },
   "homepage": "https://akermi.github.io/save-the-date",
@@ -49,6 +48,7 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "*",
-    "gh-pages": "^6.1.1"
+    "gh-pages": "^6.1.1",
+    "tailwindcss": "^3.4.16"
   }
 }
