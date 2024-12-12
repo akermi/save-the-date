@@ -45,16 +45,13 @@ body {
   text-align: center;
 }
 
-h1 {
-  @apply text-pink-500; /* Pink color for wedding theme */
-}
-
 /* .countdown-container {
   @apply mt-8 space-x-2;
 } */
 
 .countdown-item {
   @apply text-4xl md:text-8xl text-white px-2 py-1 rounded; /* Larger font size for the countdown items */
+  color: #888;
 }
 
 .spotify-embed {
@@ -93,9 +90,6 @@ h1 {
   padding: 20px;
 }
 
-h1 {
-  color: #3498db;
-}
 
 /* .card {
   background-color: #fff;
@@ -117,11 +111,15 @@ h1 {
 
 .header {
   background: #ffecd1;
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 
 .couple-name {
-  font-size: 3rem;
-  color: #333;
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: #888;
 }
 
 .wedding-date {
@@ -156,9 +154,16 @@ h1 {
   padding: 20px;
   background-color: #ffecd1;
   color: #333;
+  position: relative;
+  bottom: 0;
+  z-index: 50; /* ให้ footer อยู่ข้างบน */
+  width: 100%;
+  align-items: center;
+  justify-content: center;
 }
 
 .countdown-container {
+  padding: 20px;
   display: flex;
   flex-wrap: wrap; /* Wrap content for smaller screens */
   align-items: center;
@@ -172,10 +177,79 @@ h1 {
   display: flex;        /* Use flexbox */
   justify-content: center; /* Centers horizontally */
   align-items: center;     /* Centers vertically (optional) */
+  /* height: 100vh; */
 }
 
 .responsive-image {
   width: 100%;
   height: auto;
   max-width: 100%;
+}
+.wedding-details {
+  padding: 20px;
+  /* max-width: 800px; */
+  margin: 0 auto;
+  background: #fff5f5; /* สีชมพูอ่อน */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;    /* Sticks to the top */
+  top: 0;  
+  z-index: 3;
+}
+
+.venue-container {
+  display: grid;
+  grid-template-columns: 3fr 5fr; /* แบ่งรูปภาพ 3 ส่วน และข้อความ 5 ส่วน */
+  gap: 20px; /* ระยะห่างระหว่างคอลัมน์ */
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .venue-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.venue-image img {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  height: auto;
+}
+
+.venue-text h3 {
+  margin: 0 0 10px;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+}
+
+.venue-text p {
+  margin: 0 0 10px;
+  color: #666;
+}
+
+.venue-text a {
+  color: #888;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.venue-text a:hover {
+  color: #888;
+}
+
+.card {
+  /* max-width: 800px; */
+  margin: 0 auto;
+  background: #fff5f5; /* สีชมพูอ่อน */
+}
+
+@media (max-width: 768px) {
+  .countdown-container, .card-container, .wedding-details {
+    padding: 20px;
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+  }
 }

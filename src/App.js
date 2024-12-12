@@ -28,7 +28,7 @@
 // export default App;
 import React from 'react';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
-import CountdownPage from './Countdown';
+// import CountdownPage from './Countdown';
 import MapPage from './Map';
 import WebPage from './Web';
 import StoryPage from './Story';
@@ -40,7 +40,7 @@ function App() {
     <Router>
       <div className="App">
         <Routes>
-          <Route path="/" element={<CountdownPage />} />
+          <Route path="/" element={<StoryPage />} />
           <Route path="/map" element={<MapPage />} />
           <Route path="/web" element={<WebPage />} />
           <Route path="/story" element={<StoryPage />} />
