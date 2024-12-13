@@ -242,9 +242,19 @@ body {
 .card {
   /* max-width: 800px; */
   margin: 0 auto;
-  background: #fff5f5; /* สีชมพูอ่อน */
 }
 
+.hashtag-container {
+  perspective: 100%; /* สร้างมุมมอง 3D */
+  margin: 0;    
+  padding: 20px;
+  flex-wrap: wrap; /* Wrap content for smaller screens */
+  position: relative;    /* Sticks to the top */
+  background: #fff5f5; 
+  overflow-y: auto;     
+  top:0;
+  z-index: 1;
+}
 @media (max-width: 768px) {
   .countdown-container, .card-container, .wedding-details {
     padding: 20px;

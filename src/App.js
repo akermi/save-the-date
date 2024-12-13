@@ -33,6 +33,7 @@ import MapPage from './Map';
 import WebPage from './Web';
 import StoryPage from './Story';
 import CardPage from './Card';
+import HashtagPage from './Hashtag';
 import './App.css';
 
 function App() {
@@ -45,6 +46,7 @@ function App() {
           <Route path="/web" element={<WebPage />} />
           <Route path="/story" element={<StoryPage />} />
           <Route path="/card" element={<CardPage />} />
+          <Route path="/hashtag" element={<HashtagPage />} />
         </Routes>
       </div>
     </Router>

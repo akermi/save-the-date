@@ -1,0 +1,34 @@
+/* ImageGrid.css */
+.hashtag-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* ควบคุมจำนวนคอลัมน์ */
+  gap: 10px;  /* ระยะห่างระหว่างรูป */
+  padding: 10px;
+  justify-items: center;  /* Center items horizontally */
+  align-items: center;    /* Center items vertically */
+}
+
+.hashtag-item {
+  display: flex;
+  justify-content: center; /* Center content horizontally within the item */
+  align-items: center;     /* Center content vertically within the item */
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.hashtag-item img {
+  width: 80%;
+  height: 80%;
+  object-fit: cover; /* ทำให้รูปไม่เสียสัดส่วน */
+}
+
+.hashtag-item iframe {
+  width: 100%;
+  max-width: 476px;
+  aspect-ratio: 16/9;
+}
+@media (max-width: 768px) {
+  .hashtag-grid {
+    grid-template-columns: 1fr;  /* One column on smaller screens */
+  }
+}

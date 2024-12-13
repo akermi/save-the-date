@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';  // You can style it as per your preference
 import Countdown from 'react-countdown';
 import Card from './Card';
+import Hashtag from './Hashtag';
 //const imgNo1 = process.env.PUBLIC_URL + '/img/1.png';
 // const imgNo2 = process.env.PUBLIC_URL + '/img/2.png';
 const venueImgUrl = "https://scontent.fbkk29-4.fna.fbcdn.net/v/t39.30808-6/373610670_836782847888831_8379830579646254011_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_ohc=ZL-vIcAKFYkQ7kNvgF9oETs&_nc_zt=23&_nc_ht=scontent.fbkk29-4.fna&_nc_gid=AuX_M2mJOglK_BZTEdEYu24&oh=00_AYAnlB3ZJJaaaePyiiJxoNrdqqwELIvgo2A4EarCAkcxqw&oe=67605D66";
@@ -59,7 +60,10 @@ const WeddingPage = () => {
         </p>
         <img src="our_story.jpg" alt="Our Story" className="story-image"/>
       </section> */}
-
+      <section className="hashtag-container h-screen">
+      <h1 className="couple-name">#mintakelovestory</h1>
+            <Hashtag />
+      </section>
       {/* RSVP Section */}
       {/* <section className="rsvp">
         <h2>RSVP</h2>

@@ -12,7 +12,7 @@
   flex-wrap: wrap; /* Wrap content for smaller screens */
   position: sticky;    /* Sticks to the top */
   top: 0;     
-  background: #ffd7bc; 
+  background: #f9e8de; 
   z-index: 2;
 }
 
