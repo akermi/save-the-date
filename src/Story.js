@@ -5,14 +5,22 @@ import Card from './Card';
 import Hashtag from './Hashtag';
 //const imgNo1 = process.env.PUBLIC_URL + '/img/1.png';
 // const imgNo2 = process.env.PUBLIC_URL + '/img/2.png';
-const venueImgUrl = "https://scontent.fbkk29-4.fna.fbcdn.net/v/t39.30808-6/373610670_836782847888831_8379830579646254011_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_ohc=ZL-vIcAKFYkQ7kNvgF9oETs&_nc_zt=23&_nc_ht=scontent.fbkk29-4.fna&_nc_gid=AuX_M2mJOglK_BZTEdEYu24&oh=00_AYAnlB3ZJJaaaePyiiJxoNrdqqwELIvgo2A4EarCAkcxqw&oe=67605D66";
-
+// const venueImgUrl = process.env.PUBLIC_URL + '/img/unda-80.jpg';
+const welcomeImg =  process.env.PUBLIC_URL + '/img/unda-80.jpg';
 const targetDate = new Date('March 9, 2025 07:00:00 GMT+0000').getTime();
-
+  const venueImgUrl = [
+    process.env.PUBLIC_URL + '/img/unda-51.jpg',
+    process.env.PUBLIC_URL + '/img/unda-10.jpg',
+    process.env.PUBLIC_URL + '/img/unda-100.jpg',
+  ];
 
 const renderer = ({ days, hours, minutes, seconds, completed }) => {
     if (completed) {
       return (<div className="flex flex-col items-center">
+         <div className="wel-image-container">
+          <img src={welcomeImg} alt="welcomeImg" />
+          </div>
+          <br/>
         <p>We’re Getting Married</p>
         <h1 className="couple-name">Sakonwan & Nattaphong</h1>
         <p className="wedding-date">Sunday, March 09, 2025</p> 
@@ -23,9 +31,13 @@ const renderer = ({ days, hours, minutes, seconds, completed }) => {
     } else {
       return (
         <div className="flex flex-col items-center">
+           <div className="wel-image-container">
+          <img src={welcomeImg} alt="welcomeImg" />
+          </div>
+          <br/>
         <p>We’re Getting Married</p>
         <h1 className="couple-name">Sakonwan & Nattaphong</h1>
-            <div className="countdown-container  p-8 rounded-lg shadow-md">
+         <div className="countdown-item rounded-lg shadow-md">
                 <span className="countdown-item">{String(days).padStart(2, '0')}d</span>
                 <span className="countdown-item">{String(hours).padStart(2, '0')}:</span>
                 <span className="countdown-item">{String(minutes).padStart(2, '0')}:</span>
@@ -92,30 +104,36 @@ const WeddingPage = () => {
 
         </div>
       </section> */}
+      
       <section className="wedding-details h-screen">
-        <div className="venue-container">
-          <div className="image-container venue-image">
-          <img src={venueImgUrl} alt="Venue" />
-          </div>
-          <div className="venue-text">
-          <div className="venue">
-          <h1>สถานที่</h1>
-          <br/>
-            <h3>UNDA Wedding Studio</h3>
-            <p>Unda Wedding Studio, Nakhon Chai Si, Nakhon Pathom</p>
-          </div>
-          <div className="venue">
-            <h3>สตูดิโอ อันดาเวดดิ้ง</h3>
-            {/* 114/, 75/1 หมู่ 2 ตำบล ท่ากระชับ อำเภอนครชัยศรี นครปฐม 73120 */}
-            <p>สตูดิโอ อันดาเวดดิ้ง, นครชัยศรี, นครปฐม</p>
-          </div>
-          <br/>
-          <a href="https://maps.app.goo.gl/F9x4tKpACCn6ms9i9" target="_blank" rel="noopener noreferrer">
-            Maps
-          </a>
-          </div>
-        </div>
-      </section>
+  <div className="venue-container">
+    <div className="venue-image">
+      <div className="image-slider">
+        <div className="slide"><img src={venueImgUrl[0]} alt="Venue 1" /></div>
+        <div className="slide"><img src={venueImgUrl[1]} alt="Venue 2" /></div>
+        <div className="slide"><img src={venueImgUrl[2]} alt="Venue 3" /></div>
+      </div>
+    </div>
+    <div className="venue-text">
+      <div className="venue">
+        <h2>wedding venue</h2>
+        <br />
+        <h3>UNDA Wedding Studio</h3>
+        <p>Unda Wedding Studio, Nakhon Chai Si, Nakhon Pathom</p>
+      </div>
+      <div className="venue">
+        <h3>สตูดิโอ อันดาเวดดิ้ง</h3>
+        <p>สตูดิโอ อันดาเวดดิ้ง, นครชัยศรี, นครปฐม</p>
+      </div>
+      <br />
+      <a href="https://maps.app.goo.gl/F9x4tKpACCn6ms9i9" target="_blank" rel="noopener noreferrer">
+        Maps
+      </a>
+      <br />
+      <br />
+    </div>
+  </div>
+</section>
 
 
       {/* Registry Section */}

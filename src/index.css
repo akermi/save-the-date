@@ -31,8 +31,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p, span, li {
-  font-family: 'Roboto', sans-serif;
-  color: #888;
+  /* font-family: 'Roboto', sans-serif; */
+  font-family: 'Playfair Display', serif;
+  color: rgba(88, 59, 2, 0.535);
 }
 
 

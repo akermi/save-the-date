@@ -3,6 +3,9 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Slick carousel styles */
+@import '~slick-carousel/slick/slick.css';
+@import '~slick-carousel/slick/slick-theme.css';
 
 .App {
   text-align: center;
@@ -50,8 +53,8 @@ body {
 } */
 
 .countdown-item {
-  @apply text-4xl md:text-8xl text-white px-2 py-1 rounded; /* Larger font size for the countdown items */
-  color: #888;
+  @apply text-4xl md:text-4xl text-white px-2 py-1 rounded; /* Larger font size for the countdown items */
+  color: rgba(88, 59, 2, 0.535);
 }
 
 .spotify-embed {
@@ -118,8 +121,8 @@ body {
 
 .couple-name {
   font-family: 'Playfair Display', serif;
-  font-size: 2rem;
-  color: #888;
+  font-size: 1.6rem;
+  color: rgba(88, 59, 2, 0.535);;
 }
 
 .wedding-date {
@@ -163,7 +166,7 @@ body {
 }
 
 .countdown-container {
-  padding: 20px;
+  /* padding: 10px; */
   display: flex;
   flex-wrap: wrap; /* Wrap content for smaller screens */
   align-items: center;
@@ -209,35 +212,122 @@ body {
     grid-template-columns: 1fr;
   }
 }
-
-.venue-image img {
+/* Container for the slider */
+.venue-image {
   width: 100%;
-  max-width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  height: auto;
+  height: auto; /*Adjust as per your design */
+  overflow: hidden;
+  position: relative;
+  object-fit: cover; /* ปรับให้ภาพดูสมดุล */
+}
+
+/* Slider setup */
+.image-slider {
+  display: flex;
+  animation: slide 15s infinite; /* Animation for the slide */
+}
+
+/* Each slide */
+.slide {
+  flex: 0 0 100%;
+  transition: transform 1s ease;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Keyframes for automatic sliding */
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  33.33% {
+    transform: translateX(-100%);
+  }
+  66.66% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.venue-text {
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.venue-text h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: rgba(88, 59, 2, 0.535);
+  margin-bottom: 15px;
+  text-align: center;
 }
 
 .venue-text h3 {
   margin: 0 0 10px;
   font-family: 'Playfair Display', serif;
   font-size: 1.5rem;
+  color: rgba(88, 59, 2, 0.535);;
+  font-weight: 600;
 }
 
 .venue-text p {
-  margin: 0 0 10px;
-  color: #666;
+  margin: 0 0 15px;
+  font-family: 'Playfair Display', serif;
+  color: rgba(88, 59, 2, 0.535);;
+  font-size: 1.1rem;
+  line-height: 1.6;
 }
 
 .venue-text a {
-  color: #888;
+  color: rgba(88, 59, 2, 0.535);;
   text-decoration: none;
+  font-family: 'Playfair Display', serif;
   font-weight: bold;
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 1.2rem;
 }
 
 .venue-text a:hover {
-  color: #888;
+  color: #005f87;
+  text-decoration: underline;
 }
+
+.venue-text .venue {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .venue-text {
+    padding: 15px;
+  }
+
+  .venue-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .venue-text h3 {
+    font-size: 1.2rem;
+  }
+
+  .venue-text p {
+    font-size: 1rem;
+  }
+
+  .venue-text a {
+    font-size: 1.1rem;
+  }
+}
+
+
+
 
 .card {
   /* max-width: 800px; */
@@ -262,4 +352,25 @@ body {
     /* flex-direction: column; */
     align-items: center;
   }
+}
+
+.wel-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* ตัดส่วนที่เกิน */
+  border-radius: 8px; /* มุมโค้ง */
+  max-width: 600px; /* ให้ปรับตามขนาดหน้าจอ */
+  max-height: 420px; /* กำหนดความสูงสูงสุด */
+  width: auto; /* ความกว้างปรับอัตโนมัติ */
+  height: auto;
+}
+.wel-image-container img {
+  max-width: 100%; /* ปรับขนาดให้พอดีกับ container */
+  height: auto; /* คงสัดส่วนภาพ */
+  object-fit: cover; /* ปรับให้ภาพดูสมดุล */
+  transition: transform 0.3s ease; /* เพิ่มเอฟเฟกต์เมื่อเลื่อนเมาส์ */
+}
+.wel-image-container img:hover {
+  transform: scale(1.5); /* ซูมเข้านิดหน่อย */
 }
