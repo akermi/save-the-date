@@ -1,39 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: 'Lato', sans-serif;
+  background: #fffaf5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-h1, h2, h3 {
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: 'Playfair Display', serif;
-  color: #888;
 }
 
-a, .registry-button {
-  text-decoration: none;
-  color: white;
-  background-color: #f8bac9;
-  padding: 10px 20px;
-  border-radius: 25px;
-  transition: background 0.3s ease;
+img,
+iframe {
+  max-width: 100%;
 }
-
-a:hover, .registry-button:hover {
-  background-color: #b6f8c4;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Playfair Display', serif;
-  color: #888; /* สีสำหรับหัวข้อ */
-}
-
-p, span, li {
-  /* font-family: 'Roboto', sans-serif; */
-  font-family: 'Playfair Display', serif;
-  color: rgba(88, 59, 2, 0.535);
-}
-
-

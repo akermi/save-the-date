@@ -1,34 +1,34 @@
-/* ImageGrid.css */
 .hashtag-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* ควบคุมจำนวนคอลัมน์ */
-  gap: 10px;  /* ระยะห่างระหว่างรูป */
-  padding: 10px;
-  justify-items: center;  /* Center items horizontally */
-  align-items: center;    /* Center items vertically */
+  width: min(100%, 1160px);
+  margin: 0 auto;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(14px, 3vw, 24px);
+  align-items: start;
 }
 
 .hashtag-item {
-  display: flex;
-  justify-content: center; /* Center content horizontally within the item */
-  align-items: center;     /* Center content vertically within the item */
-  border-radius: 8px;
+  width: 100%;
+  min-width: 0;
   overflow: hidden;
+  border: 1px solid rgba(74, 52, 39, 0.1);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.68);
+  box-shadow: 0 18px 55px rgba(77, 46, 32, 0.11);
 }
 
-.hashtag-item img {
-  width: 80%;
-  height: 80%;
-  object-fit: cover; /* ทำให้รูปไม่เสียสัดส่วน */
+.hashtag-item .instagram-media {
+  margin: 0 auto !important;
 }
 
 .hashtag-item iframe {
   width: 100%;
-  max-width: 476px;
-  aspect-ratio: 16/9;
+  max-width: 100%;
+  border: 0;
 }
-@media (max-width: 768px) {
+
+@media (max-width: 900px) {
   .hashtag-grid {
-    grid-template-columns: 1fr;  /* One column on smaller screens */
+    grid-template-columns: 1fr;
   }
 }

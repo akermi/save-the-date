@@ -16,12 +16,11 @@ const targetDate = new Date('March 9, 2025 07:00:00 GMT+0000').getTime();
 
 const renderer = ({ days, hours, minutes, seconds, completed }) => {
     if (completed) {
-      return (<div className="flex flex-col items-center">
+      return (<div className="hero-content">
          <div className="wel-image-container">
-          <img src={welcomeImg} alt="welcomeImg" />
+          <img src={welcomeImg} alt="Sakonwan and Nattaphong" />
           </div>
-          <br/>
-        <p>We’re Getting Married</p>
+        <p className="hero-kicker">We’re Getting Married</p>
         <h1 className="couple-name">Sakonwan & Nattaphong</h1>
         <p className="wedding-date">Sunday, March 09, 2025</p> 
         <div className="spotify-embed">
@@ -30,18 +29,17 @@ const renderer = ({ days, hours, minutes, seconds, completed }) => {
         </div>);
     } else {
       return (
-        <div className="flex flex-col items-center">
+        <div className="hero-content">
            <div className="wel-image-container">
-          <img src={welcomeImg} alt="welcomeImg" />
+          <img src={welcomeImg} alt="Sakonwan and Nattaphong" />
           </div>
-          <br/>
-        <p>We’re Getting Married</p>
+        <p className="hero-kicker">We’re Getting Married</p>
         <h1 className="couple-name">Sakonwan & Nattaphong</h1>
-         <div className="countdown-item rounded-lg shadow-md">
-                <span className="countdown-item">{String(days).padStart(2, '0')}d</span>
-                <span className="countdown-item">{String(hours).padStart(2, '0')}:</span>
-                <span className="countdown-item">{String(minutes).padStart(2, '0')}:</span>
-                <span className="countdown-item">{String(seconds).padStart(2, '0')}s</span>
+         <div className="countdown-panel">
+                <span className="countdown-item"><strong>{String(days).padStart(2, '0')}</strong><small>days</small></span>
+                <span className="countdown-item"><strong>{String(hours).padStart(2, '0')}</strong><small>hrs</small></span>
+                <span className="countdown-item"><strong>{String(minutes).padStart(2, '0')}</strong><small>min</small></span>
+                <span className="countdown-item"><strong>{String(seconds).padStart(2, '0')}</strong><small>sec</small></span>
             </div>
            
           <div className="spotify-embed">
@@ -55,7 +53,7 @@ const renderer = ({ days, hours, minutes, seconds, completed }) => {
 
 const WeddingPage = () => {
   return (
-    <div className="">
+    <div className="wedding-page">
       <header className="header">
         <section className="countdown-container h-screen">
           <div className="countdown">
@@ -72,8 +70,11 @@ const WeddingPage = () => {
         </p>
         <img src="our_story.jpg" alt="Our Story" className="story-image"/>
       </section> */}
-      <section className="hashtag-container h-screen">
-      <h1 className="couple-name">#mintakelovestory</h1>
+      <section className="hashtag-container">
+      <div className="section-heading">
+        <p>Moments</p>
+        <h2>#mintakelovestory</h2>
+      </div>
             <Hashtag />
       </section>
       {/* RSVP Section */}
@@ -82,7 +83,11 @@ const WeddingPage = () => {
         <p>Please let us know if you can make it by clicking the button below.</p>
         <button className="rsvp-button">RSVP Here</button>
       </section> */}
-      <section className="card-container h-screen">
+      <section className="card-container">
+            <div className="section-heading">
+              <p>Invitation</p>
+              <h2>Tap the card</h2>
+            </div>
             <Card />
       </section>
       {/* Wedding Day Details */}
@@ -105,7 +110,7 @@ const WeddingPage = () => {
         </div>
       </section> */}
       
-      <section className="wedding-details h-screen">
+      <section className="wedding-details">
   <div className="venue-container">
     <div className="venue-image">
       <div className="image-slider">
@@ -116,8 +121,7 @@ const WeddingPage = () => {
     </div>
     <div className="venue-text">
       <div className="venue">
-        <h2>wedding venue</h2>
-        <br />
+        <p className="venue-label">Wedding Venue</p>
         <h3>UNDA Wedding Studio</h3>
         <p>Unda Wedding Studio, Nakhon Chai Si, Nakhon Pathom</p>
       </div>
@@ -125,12 +129,9 @@ const WeddingPage = () => {
         <h3>สตูดิโอ อันดาเวดดิ้ง</h3>
         <p>สตูดิโอ อันดาเวดดิ้ง, นครชัยศรี, นครปฐม</p>
       </div>
-      <br />
       <a href="https://maps.app.goo.gl/F9x4tKpACCn6ms9i9" target="_blank" rel="noopener noreferrer">
-        Maps
+        Open Maps
       </a>
-      <br />
-      <br />
     </div>
   </div>
 </section>
