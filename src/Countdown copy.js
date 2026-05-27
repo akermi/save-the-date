@@ -1,5 +1,5 @@
 // src/Countdown.js
-import React from 'react';
+import React, { useEffect } from 'react';
 import Countdown from 'react-countdown';
 import { useNavigate } from 'react-router-dom';
 
@@ -15,6 +15,7 @@ const CountdownComponent = () => {
       return (
         <div className="flex flex-col items-center justify-center h-screen">
                <h1 className="text-4xl font-bold ">Coming Soon</h1>
+               
             <div className="countdown-container  p-8 rounded-lg shadow-md">
                 <span className="countdown-item bg-pastel3">{String(days).padStart(2, '0')}d</span>
                 <span className="countdown-item bg-pastel4">{String(hours).padStart(2, '0')}:</span>
@@ -34,14 +35,19 @@ const CountdownComponent = () => {
               allowtransparency="true"
               allow="encrypted-media"
             ></iframe> */}
-            <iframe  title="spotify-embed" src="https://open.spotify.com/embed/playlist/37i9dQZF1DXc51TI5dx7RC?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowFullScreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            <iframe  title="spotify-embed" src="https://open.spotify.com/embed/playlist/37i9dQZF1DXc51TI5dx7RC?autoplay=1&utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowFullScreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
           </div>
         </div>
        
       );
     }
   };
-
+  useEffect(() => {
+    const iframe = document.querySelector('iframe');
+    if (iframe) {
+      iframe.src = iframe.src + '&autoplay=1'; // Add autoplay if possible
+    }
+  }, []); // Run once when component mounts
   return (
     <div className="App-header h-screen gradient-bg-pastel">
       <Countdown date={targetDate} renderer={renderer} />
