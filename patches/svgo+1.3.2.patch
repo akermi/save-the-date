@@ -1,0 +1,18 @@
+diff --git a/node_modules/svgo/lib/svgo/coa.js b/node_modules/svgo/lib/svgo/coa.js
+--- a/node_modules/svgo/lib/svgo/coa.js
++++ b/node_modules/svgo/lib/svgo/coa.js
+@@ -190,4 +190,4 @@ module.exports = function() {
+                     } else if (err.code === 'EISDIR') {
+                         return printErrorAndExit(`Error: directory '${opts.config}' is not a config file.`);
+                     }
+-                    config = YAML.safeLoad(configData);
++                    config = YAML.load(configData);
+diff --git a/node_modules/svgo/lib/svgo/config.js b/node_modules/svgo/lib/svgo/config.js
+--- a/node_modules/svgo/lib/svgo/config.js
++++ b/node_modules/svgo/lib/svgo/config.js
+@@ -27,4 +27,4 @@ module.exports = function(config) {
+             defaults.plugins = preparePluginsArray(config, defaults.plugins);
+         }
+     } else {
+-        defaults = Object.assign({}, yaml.safeLoad(FS.readFileSync(__dirname + '/../../.svgo.yml', 'utf8')));
++        defaults = Object.assign({}, yaml.load(FS.readFileSync(__dirname + '/../../.svgo.yml', 'utf8')));
