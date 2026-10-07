@@ -27,7 +27,7 @@
 
 // export default App;
 import React from 'react';
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router';
 // import CountdownPage from './Countdown';
 import MapPage from './Map';
 import WebPage from './Web';
@@ -54,4 +54,3 @@ function App() {
 }
 
 export default App;
-

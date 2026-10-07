@@ -1,7 +1,7 @@
 // src/Countdown.js
 import React, { useEffect } from 'react';
 import Countdown from 'react-countdown';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router';
 
 const targetDate = new Date('March 9, 2025 07:00:00 GMT+0000').getTime();
 
@@ -56,4 +56,3 @@ const CountdownComponent = () => {
 };
 
 export default CountdownComponent;
-
